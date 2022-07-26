@@ -772,7 +772,7 @@
         
         <comps>
           <li Class="CompProperties_Milkable">
-            <milkDef>Chemfuel</milkDef>
+            <milkDef>DragonMilk</milkDef>
             <milkIntervalDays>1</milkIntervalDays>
             <milkAmount>5</milkAmount>
           </li> 

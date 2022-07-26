@@ -12,7 +12,7 @@
     </statBases>
     <comps>
 		<li Class="CompProperties_Milkable">
-			<milkDef>Milk</milkDef>
+			<milkDef>FoxgirlMilk</milkDef>
 			<milkIntervalDays>2</milkIntervalDays>
 			<milkAmount>6</milkAmount>
 		</li>

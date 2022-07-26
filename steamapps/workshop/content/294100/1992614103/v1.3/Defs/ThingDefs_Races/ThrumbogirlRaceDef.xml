@@ -570,7 +570,7 @@
         
         <comps>
           <li Class="CompProperties_Milkable">
-            <milkDef>Milk</milkDef>
+            <milkDef>ThrumbogirlMilk</milkDef>
             <milkIntervalDays>1</milkIntervalDays>
             <milkAmount>8</milkAmount>
           </li> 
