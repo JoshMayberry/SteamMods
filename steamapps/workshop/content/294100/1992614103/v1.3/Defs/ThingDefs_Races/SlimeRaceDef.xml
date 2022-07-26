@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <defName>MG_Slime</defName>
+        <label>Slime</label>
+        <description>A mutant accumulation of slimy liquid that has developed a semblance of intelligence.</description>
+        <alienRace>
+            <generalSettings>
+                <maleGenderProbability>0.25</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <canLayDown>true</canLayDown>
+                <disallowedTraits>
+                    <li><defName>AnnoyingVoice</defName></li>
+                    <li><defName>CreepyBreathing</defName></li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>2</degree>
+                    </li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>1</degree>
+                    </li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>-1</degree>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>-1</degree>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>-2</degree>
+                    </li>
+                </disallowedTraits>
+                <maxDamageForSocialfight>8</maxDamageForSocialfight>
+                <allowHumanBios>false</allowHumanBios>
+                <immuneToXenophobia>false</immuneToXenophobia>
+                <minAgeForAdulthood>1</minAgeForAdulthood>
+                <humanRecipeImport>true</humanRecipeImport>
+                
+                
+                
+                <alienPartGenerator>
+                    <colorChannels>
+                        <li>
+                            <name>skin</name>
+                            <first Class="MonsterGirl.ColorGenerator_OptionsSimpleInterpolate">
+                                <options>
+                                    <li> <!-- Green -->
+                                        <weight>5</weight>
+                                        <min>RGBA(0,130,35,255)</min>
+                                        <max>RGBA(73,207,112,255)</max>
+                                    </li>
+                                    <li> <!-- Orange -->
+                                        <weight>5</weight>
+                                        <min>RGBA(255,99,38,255)</min>
+                                        <max>RGBA(255,153,76,255)</max>
+                                    </li>
+                                    <li> <!-- Red -->
+                                        <weight>5</weight>
+                                        <min>RGBA(100,0,0,255)</min>
+                                        <max>RGBA(177,38,38,255)</max>
+                                    </li>
+                                    <li> <!-- Blue -->
+                                        <weight>5</weight>
+                                        <min>RGBA(1,57,134,255)</min>
+                                        <max>RGBA(78,134,211,255)</max>
+                                    </li>
+                                    <li> <!-- Brown -->
+                                        <weight>1</weight>
+                                        <min>RGBA(109,51,11,255)</min>
+                                        <max>RGBA(186,128,88,255)</max>
+                                    </li>
+                                    <li> <!-- Purple -->
+                                        <weight>5</weight>
+                                        <min>RGBA(122,108,161,255)</min>
+                                        <max>RGBA(199,185,238,255)</max>
+                                    </li>
+                                    <li> <!-- Yellow -->
+                                        <weight>5</weight>
+                                        <min>RGBA(216,155,0,255)</min>
+                                        <max>RGBA(255,232,51,255)</max>
+                                    </li>
+                                    <li> <!-- Beige -->
+                                        <weight>5</weight>
+                                        <min>RGBA(144,122,85,255)</min>
+                                        <max>RGBA(221,199,162,255)</max>
+                                    </li>
+                                    <li> <!-- Teal -->
+                                        <weight>5</weight>
+                                        <min>RGBA(0,91,109,255)</min>
+                                        <max>RGBA(45,168,186,255)</max>
+                                    </li>
+                                    <li> <!-- Maroon -->
+                                        <weight>5</weight>
+                                        <min>RGBA(56,0,0,255)</min>
+                                        <max>RGBA(133,38,70,255)</max>
+                                    </li>
+                                    <li> <!-- Grey -->
+                                        <weight>1</weight>
+                                        <min>RGBA(32,32,34,255)</min>
+                                        <max>RGBA(126,126,128,255)</max>
+                                    </li>
+                                    <li> <!-- White-ish -->
+                                        <weight>1</weight>
+                                        <min>RGBA(210,188,138,255)</min>
+                                        <max>RGBA(255,255,255,255)</max>
+                                    </li>
+                                    <li> <!-- Blackish -->
+                                        <weight>1</weight>
+                                        <min>RGBA(16,16,16,255)</min>
+                                        <max>RGBA(32,32,32,255)</max>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
+                
+                    <aliencrowntypes>
+                        <li>Average_Normal</li>
+                    </aliencrowntypes>
+                    <alienbodytypes>
+                        <li>Female</li>
+                    </alienbodytypes>
+                    <useGenderedHeads>false</useGenderedHeads>
+                    <useGenderedBodies>true</useGenderedBodies>
+                    <atlasScale>2</atlasScale>
+
+                    <customDrawSize>(1.2, 1.2)</customDrawSize>
+                    <customHeadDrawSize>(1.2, 1.2)</customHeadDrawSize>
+                    <customPortraitDrawSize>(1.2, 1.2)</customPortraitDrawSize>
+                    <customPortraitHeadDrawSize>(1.2, 1.2)</customPortraitHeadDrawSize>
+                    <headOffset>(0.0, 0.06)</headOffset>
+                    
+                    <bodyAddons>
+                        <li>
+                            <path>Slime/FemaleBody/Female_Body</path>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>false</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>Slime/Heads/FemaleHeads/Female_Head</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        <li>
+                            <path>Slime/Heads/FemaleHeads/Female_Head_Back</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>Slime/MaleBody/Male_Body</path>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>false</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        <li>
+                            <path>Slime/Heads/MaleHeads/Male_Head</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>Slime/Heads/MaleHeads/Male_Head_Back</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.44,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                    </bodyAddons>
+                    
+                </alienPartGenerator>
+            </generalSettings>
+            <graphicPaths>
+                <li>
+                    <body>Slime/</body>
+                    <head>Slime/Heads/</head>
+                    <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>
+                </li>
+            </graphicPaths>
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            <thoughtSettings>
+                <cannotReceiveThoughts>
+                    <li>Naked</li>
+                    <li>SharedBed</li>
+                    <li>SleptOutside</li>
+                    <li>SleptOnGround</li>
+                    <li>SleptInCold</li>
+                    <li>SleptInHeat</li>
+                    <li>AteKibble</li>
+                    <li>AteInsectMeatDirect</li>
+                    <li>AteInsectMeatAsIngredient</li>
+                    <li>AteRawFood</li>
+                </cannotReceiveThoughts>
+            </thoughtSettings>
+            <raceRestriction>
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+                <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+                <onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes>
+                <onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits>
+                <onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood>
+            </raceRestriction>
+        </alienRace>
+        <statBases>
+            <!-->Placeholder</!-->
+            <MarketValue>1800</MarketValue>
+            <Mass>60</Mass>
+            <MoveSpeed>4.0</MoveSpeed> 
+            <Flammability>0.0</Flammability><!-->Slime does not burn</!-->
+            <ComfyTemperatureMin>0</ComfyTemperatureMin><!--Bad with the Cold</!-->
+            <ComfyTemperatureMax>60</ComfyTemperatureMax><!-->Amazing with the heat</!-->
+            <ImmunityGainSpeed>2.0</ImmunityGainSpeed><!-->Great at disease immunity</!-->	
+            
+            <!-->A bit of Natural Armor</!-->
+            <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.25</ArmorRating_Heat>
+
+            <ToxicSensitivity>1.0</ToxicSensitivity>
+            <EatingSpeed>1.0</EatingSpeed>
+            <!--
+            <MeatAmount>35</MeatAmount>
+            -->
+            <LeatherAmount>50</LeatherAmount>
+            
+            <MeleeDodgeChance>0.8</MeleeDodgeChance><!-->A little sluggish</!-->
+            <AimingDelayFactor>1.0</AimingDelayFactor><!-->Not used to guns</!-->
+            <NegotiationAbility>0.80</NegotiationAbility><!-->Not good at negotiations</!-->
+            <ConstructionSpeed>1</ConstructionSpeed>
+            <SocialImpact>1.25</SocialImpact><!-->Monstergirls are cute, People like them more</!-->
+        </statBases>
+        <tools>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            </li>
+        </tools>
+        
+        <comps>
+          <li Class="CompProperties_Milkable">
+            <milkDef>SlimeExtract</milkDef>
+            <milkIntervalDays>60</milkIntervalDays>
+            <milkAmount>1</milkAmount>
+          </li> 
+          <li Class="CompProperties_Shearable">
+            <woolDef>SlimeJelly</woolDef>
+            <shearIntervalDays>1</shearIntervalDays>
+            <woolAmount>1</woolAmount>
+          </li>
+        </comps>
+        
+        <race>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>100</lifeExpectancy>
+            <leatherDef>SlimeJelly</leatherDef>
+            <nameCategory>HumanStandard</nameCategory>
+            <trainability>Advanced</trainability>
+            <hasGenders>true</hasGenders>
+            <body>MG_Slime_Body</body>
+            <wildness>0.7</wildness>
+            <baseBodySize>1.0</baseBodySize>
+            <baseHungerRate>1.0</baseHungerRate>
+            <baseHealthScale>1.0</baseHealthScale>
+            <manhunterOnDamageChance>0.01</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+            <foodType>OmnivoreHuman</foodType>
+            <fleshType>MG_Monstergirl_Flesh</fleshType>
+            <gestationPeriodDays>5</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                  <li>(0.5, 0)</li>
+                  <li>(1, 1)</li>
+                  <li>(3, 1)</li>
+                  <li>(3.5, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeStageAges>
+                <li>
+                    <def>SlimeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>SlimeJuvenile</def>
+                    <minAge>0.25</minAge>
+                </li>
+                <li>
+                    <def>SlimeAdult</def>
+                    <minAge>0.8</minAge>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            <specialShadowData>
+                <volume>(0.3, 0.8, 0.4)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </specialShadowData>
+            <ageGenerationCurve>
+				<points>
+					<li>(0.5,0)</li>
+					<li>(10,50)</li>
+					<li>(20,100)</li>
+					<li>(40,20)</li>
+					<li>(80,3)</li>
+                    <li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+            </hediffGiverSets>
+        </race>
+        <recipes>   
+        </recipes>
+        <tradeTags>
+            <li>AnimalExotic</li>
+        </tradeTags>
+    </AlienRace.ThingDef_AlienRace>
+    
+    <LifeStageDef>
+		<defName>SlimeBaby</defName>
+		<label>child</label>
+		<bodySizeFactor>0.5</bodySizeFactor>
+		<healthScaleFactor>0.5</healthScaleFactor>
+		<hungerRateFactor>0.6</hungerRateFactor>
+		<marketValueFactor>0.9</marketValueFactor>
+		<meleeDamageFactor>0.7</meleeDamageFactor>
+		<statFactors>
+			<MoveSpeed>0.65</MoveSpeed>
+		</statFactors>
+		<milkable>false</milkable>
+		<shearable>false</shearable>
+	</LifeStageDef>
+
+	<LifeStageDef>
+		<defName>SlimeJuvenile</defName>
+		<label>teenager</label>
+		<adjective>teenage</adjective>
+		<reproductive>true</reproductive>
+		<bodySizeFactor>0.85</bodySizeFactor>
+		<healthScaleFactor>0.90</healthScaleFactor>
+		<meleeDamageFactor>0.85</meleeDamageFactor>
+		<statFactors>
+			<MoveSpeed>0.95</MoveSpeed>
+		</statFactors>
+		<milkable>true</milkable>
+		<shearable>true</shearable>
+	</LifeStageDef>
+
+	<LifeStageDef>
+		<defName>SlimeAdult</defName>
+		<label>adult</label>
+		<visible>false</visible>
+		<reproductive>true</reproductive>
+		<milkable>true</milkable>
+		<shearable>true</shearable>
+	</LifeStageDef>
+</Defs>

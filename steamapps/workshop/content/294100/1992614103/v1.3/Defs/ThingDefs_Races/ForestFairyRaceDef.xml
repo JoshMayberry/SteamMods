@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <defName>MG_ForestFairy</defName>
+        <label>ForestFairy</label>
+        <description>A mutant of the Forest Fairy species that has developed a semblance of intelligence./n A fragile existence that withers in a toxic environment.</description>
+        <alienRace>
+            <generalSettings>
+                <maleGenderProbability>0.1</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <canLayDown>true</canLayDown>
+                <disallowedTraits>
+                    <li><defName>AnnoyingVoice</defName></li>
+                    <li><defName>CreepyBreathing</defName></li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>2</degree>
+                    </li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>1</degree>
+                    </li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                        <degree>-1</degree>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>-1</degree>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                        <degree>-2</degree>
+                    </li>
+                </disallowedTraits>
+                <maxDamageForSocialfight>8</maxDamageForSocialfight>
+                <allowHumanBios>false</allowHumanBios>
+                <immuneToXenophobia>false</immuneToXenophobia>
+                <minAgeForAdulthood>1</minAgeForAdulthood>
+                <humanRecipeImport>true</humanRecipeImport>
+                <alienPartGenerator>
+                    <colorChannels>
+                        <li>
+                            <name>hair</name>
+                            <first Class="MonsterGirl.ColorGenerator_OptionsSimpleInterpolate">
+                                <options>
+                                    <li> <!-- Green -->
+                                        <weight>100</weight>
+                                        <min>RGBA(0,130,35,255)</min>
+                                        <max>RGBA(73,207,112,255)</max>
+                                    </li>
+                                    <li> <!-- Orange -->
+                                        <weight>5</weight>
+                                        <min>RGBA(255,99,38,255)</min>
+                                        <max>RGBA(255,153,76,255)</max>
+                                    </li>
+                                    <li> <!-- Red -->
+                                        <weight>5</weight>
+                                        <min>RGBA(100,0,0,255)</min>
+                                        <max>RGBA(177,38,38,255)</max>
+                                    </li>
+                                    <li> <!-- Blue -->
+                                        <weight>5</weight>
+                                        <min>RGBA(1,57,134,255)</min>
+                                        <max>RGBA(78,134,211,255)</max>
+                                    </li>
+                                    <li> <!-- Brown -->
+                                        <weight>5</weight>
+                                        <min>RGBA(109,51,11,255)</min>
+                                        <max>RGBA(186,128,88,255)</max>
+                                    </li>
+                                    <li> <!-- Purple -->
+                                        <weight>5</weight>
+                                        <min>RGBA(122,108,161,255)</min>
+                                        <max>RGBA(199,185,238,255)</max>
+                                    </li>
+                                    <li> <!-- Yellow -->
+                                        <weight>5</weight>
+                                        <min>RGBA(216,155,0,255)</min>
+                                        <max>RGBA(255,232,51,255)</max>
+                                    </li>
+                                    <li> <!-- Beige -->
+                                        <weight>5</weight>
+                                        <min>RGBA(144,122,85,255)</min>
+                                        <max>RGBA(221,199,162,255)</max>
+                                    </li>
+                                    <li> <!-- Teal -->
+                                        <weight>10</weight>
+                                        <min>RGBA(0,91,109,255)</min>
+                                        <max>RGBA(45,168,186,255)</max>
+                                    </li>
+                                    <li> <!-- Maroon -->
+                                        <weight>5</weight>
+                                        <min>RGBA(56,0,0,255)</min>
+                                        <max>RGBA(133,38,70,255)</max>
+                                    </li>
+                                    <li> <!-- Grey -->
+                                        <weight>5</weight>
+                                        <min>RGBA(32,32,34,255)</min>
+                                        <max>RGBA(126,126,128,255)</max>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                        <li>
+                            <name>skin</name>
+                            <first Class="MonsterGirl.ColorGenerator_OptionsSimpleInterpolate">
+                                <options>
+                                    <li> <!-- White-ish -->
+                                        <weight>25</weight>
+                                        <min>RGBA(210,188,138,255)</min>
+                                        <max>RGBA(255,255,255,255)</max>
+                                    </li>
+                                </options>
+                            </first>
+                            <second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+                                <colorChannel>hair_1</colorChannel>
+                            </second>
+                        </li>
+                        <li>
+                            <name>wings</name>
+                            <first Class="MonsterGirl.ColorGenerator_OptionsSimpleInterpolate">
+                                <options>
+                                    <li> <!-- White -->
+                                        <weight>25</weight>
+                                        <min>RGBA(255,255,255,255)</min>
+                                        <max>RGBA(255,255,255,255)</max>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
+                    <aliencrowntypes>
+                        <li>Average_Normal</li>
+                    </aliencrowntypes>
+                    <alienbodytypes>
+                        <li>Female</li>
+                    </alienbodytypes>
+                    <useGenderedHeads>false</useGenderedHeads>
+                    <useGenderedBodies>true</useGenderedBodies>
+                    <atlasScale>2</atlasScale>
+
+                    <customDrawSize>(0.9, 1.0)</customDrawSize>
+                    <customHeadDrawSize>(0.95, 0.95)</customHeadDrawSize>
+                    <customPortraitDrawSize>(0.9, 1.0)</customPortraitDrawSize>
+                    <customPortraitHeadDrawSize>(0.95, 0.95)</customPortraitHeadDrawSize>
+                    <headOffset>(0.0, -0.03)</headOffset>
+                    
+                    <bodyAddons>
+                        <li>
+                            <path>ForestFairy/FemaleBody/Female_Body</path>
+                            <bodyPart>Torso</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>false</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>ForestFairy/FemaleBody/Female_Body_Back</path>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>wings</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>ForestFairy/Heads/FemaleHeads/Female_Head</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        <li>
+                            <path>ForestFairy/Heads/FemaleHeads/Female_Head_Back</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForMale>false</drawForMale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>ForestFairy/MaleBody/Male_Body</path>
+                            <bodyPart>Torso</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>false</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.3</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>ForestFairy/Heads/MaleHeads/Male_Head</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                        
+                        <li>
+                            <path>ForestFairy/Heads/MaleHeads/Male_Head_Back</path>
+                            <bodyPart>Head</bodyPart>
+                            <defaultOffset>Tail</defaultOffset>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            
+                            <drawnInBed>true</drawnInBed>
+                            <colorChannel>skin</colorChannel>
+                            <drawnDesiccated>false</drawnDesiccated>
+                            <drawForFemale>false</drawForFemale>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Female>(-0.42,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <Female>(0.0,0.55)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <Female>(-0.36,0.225)</Female>
+                                    </bodyTypes>
+                                    <crownTypes/>
+                                    <layerOffset>-0.272</layerOffset>
+                                </east>
+                            </offsets>
+                        </li>
+                    </bodyAddons>
+                    
+                </alienPartGenerator>
+            </generalSettings>
+            <graphicPaths>
+                <li>
+                    <body>ForestFairy/</body>
+                    <head>ForestFairy/Heads/</head>
+                    <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>
+                </li>
+            </graphicPaths>
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            <thoughtSettings>
+                <cannotReceiveThoughts>
+                    <li>Naked</li>
+                    <li>SharedBed</li>
+                    <li>SleptOutside</li>
+                    <li>SleptOnGround</li>
+                    <li>SleptInCold</li>
+                    <li>SleptInHeat</li>
+                    <li>AteKibble</li>
+                    <li>AteInsectMeatDirect</li>
+                    <li>AteInsectMeatAsIngredient</li>
+                    <li>AteRawFood</li>
+                </cannotReceiveThoughts>
+            </thoughtSettings>
+            <raceRestriction>
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+                <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+                <onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes>
+                <onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits>
+                <onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood>
+                
+            </raceRestriction>
+        </alienRace>
+        <statBases>
+            <!-->Placeholder</!-->
+            <MarketValue>1800</MarketValue>
+            <Mass>30</Mass>
+            <MoveSpeed>5.0</MoveSpeed> 
+            <Flammability>0.8</Flammability><!-->Can Burn</!-->
+            <ComfyTemperatureMin>10</ComfyTemperatureMin><!-->Dislike cold</!-->
+            <ComfyTemperatureMax>40</ComfyTemperatureMax><!-->Can handle the heat</!-->
+            <ImmunityGainSpeed>5.0</ImmunityGainSpeed><!-->Extreme Immunity</!-->	
+            
+            <!-->A bit of Natural Armor</!-->
+            <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.0</ArmorRating_Heat>
+
+            <ToxicSensitivity>5.0</ToxicSensitivity><!-->Extreme Sensitivity</!-->	
+            <EatingSpeed>1.1</EatingSpeed>
+            <!--
+            <MeatAmount>35</MeatAmount>
+            -->
+            <LeatherAmount>25</LeatherAmount>
+            
+            <MeleeDodgeChance>5.0</MeleeDodgeChance><!-->A little Nimble</!-->
+            <AimingDelayFactor>1.00</AimingDelayFactor><!-->Not used to guns</!-->
+            <NegotiationAbility>0.80</NegotiationAbility><!-->Not good at negotiations</!-->
+            <ConstructionSpeed>1</ConstructionSpeed>
+            <SocialImpact>1.25</SocialImpact><!-->Monstergirls are cute, People like them more</!-->
+        </statBases>
+        <tools>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.2</chanceFactor>
+                <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+                <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+            <li>
+                <label>left fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        
+        <comps>
+          <li Class="CompProperties_Milkable">
+            <milkDef>LiquidAmber</milkDef>
+            <milkIntervalDays>5</milkIntervalDays>
+            <milkAmount>1</milkAmount>
+          </li> 
+          <li Class="CompProperties_Shearable">
+            <woolDef>ForestFairyDust</woolDef>
+            <shearIntervalDays>5</shearIntervalDays>
+            <woolAmount>1</woolAmount>
+          </li>
+        </comps>
+        
+        <race>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>250</lifeExpectancy>
+            <leatherDef>Leather_Light</leatherDef>
+            <nameCategory>HumanStandard</nameCategory>
+            <trainability>Advanced</trainability>
+            <hasGenders>true</hasGenders>
+            <body>MG_ForestFairy_Body</body>
+            <wildness>0.4</wildness>
+            <baseBodySize>0.5</baseBodySize>
+            <baseHungerRate>0.5</baseHungerRate>
+            <baseHealthScale>1.0</baseHealthScale>
+            <manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+            <foodType>OmnivoreHuman</foodType>
+            <fleshType>MG_Monstergirl_Flesh</fleshType>
+            <gestationPeriodDays>30</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                  <li>(0.5, 0)</li>
+                  <li>(1, 1)</li>
+                  <li>(2, 1)</li>
+                  <li>(3, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeStageAges>
+                <li>
+                    <def>ForestFairyBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>ForestFairyJuvenile</def>
+                    <minAge>0.25</minAge>
+                </li>
+                <li>
+                    <def>ForestFairyAdult</def>
+                    <minAge>0.8</minAge>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            <specialShadowData>
+                <volume>(0.3, 0.8, 0.4)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </specialShadowData>
+            <ageGenerationCurve>
+				<points>
+					<li>(20,0)</li>
+					<li>(50,50)</li>
+					<li>(100,100)</li>
+					<li>(150,20)</li>
+					<li>(200,3)</li>
+                    <li>(250,0)</li>
+				</points>
+			</ageGenerationCurve>
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+            </hediffGiverSets>
+        </race>
+        <tradeTags>
+            <li>AnimalExotic</li>
+        </tradeTags>
+    </AlienRace.ThingDef_AlienRace>
+    
+    <LifeStageDef>
+		<defName>ForestFairyBaby</defName>
+		<label>child</label>
+		<bodySizeFactor>0.5</bodySizeFactor>
+		<healthScaleFactor>0.5</healthScaleFactor>
+		<hungerRateFactor>0.6</hungerRateFactor>
+		<marketValueFactor>0.9</marketValueFactor>
+		<meleeDamageFactor>0.7</meleeDamageFactor>
+		<statFactors>
+			<MoveSpeed>0.65</MoveSpeed>
+		</statFactors>
+		<milkable>false</milkable>
+		<shearable>false</shearable>
+	</LifeStageDef>
+
+	<LifeStageDef>
+		<defName>ForestFairyJuvenile</defName>
+		<label>teenager</label>
+		<adjective>teenage</adjective>
+		<reproductive>true</reproductive>
+		<bodySizeFactor>0.85</bodySizeFactor>
+		<healthScaleFactor>0.90</healthScaleFactor>
+		<meleeDamageFactor>0.85</meleeDamageFactor>
+		<statFactors>
+			<MoveSpeed>0.95</MoveSpeed>
+		</statFactors>
+		<milkable>true</milkable>
+		<shearable>true</shearable>
+	</LifeStageDef>
+
+	<LifeStageDef>
+		<defName>ForestFairyAdult</defName>
+		<label>adult</label>
+		<visible>false</visible>
+		<reproductive>true</reproductive>
+		<milkable>true</milkable>
+		<shearable>true</shearable>
+	</LifeStageDef>
+</Defs>
