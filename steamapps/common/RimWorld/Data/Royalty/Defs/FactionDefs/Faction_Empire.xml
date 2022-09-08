@@ -49,6 +49,7 @@
       <li>PlayerTribe</li>
       <li>PlayerColony</li>
       <li>Ancients</li>
+      <li>Nearmaere_P_Faction</li>
     </permanentEnemyToEveryoneExcept>
     <techLevel>Ultra</techLevel>
     <backstoryFilters>
