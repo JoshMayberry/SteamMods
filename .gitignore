@@ -40,3 +40,14 @@
 !/steamapps/common/RimWorld/Data/Royalty/Defs
 /steamapps/common/RimWorld/Data/Royalty/Defs/*
 !/steamapps/common/RimWorld/Data/Royalty/Defs/FactionDefs
+
+!/steamapps/common/dont_starve
+/steamapps/common/dont_starve/*
+!/steamapps/common/dont_starve/mods
+/steamapps/common/dont_starve/mods/*
+!/steamapps/common/dont_starve/mods/workshop-1506240997
+/steamapps/common/dont_starve/mods/workshop-1506240997/*
+!/steamapps/common/dont_starve/mods/workshop-1506240997/scripts
+/steamapps/common/dont_starve/mods/workshop-1506240997/scripts/*
+!/steamapps/common/dont_starve/mods/workshop-1506240997/scripts/prefabs
+

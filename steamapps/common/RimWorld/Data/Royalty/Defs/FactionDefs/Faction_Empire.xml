@@ -43,13 +43,19 @@
     <structureMemeWeights>
       <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
     </structureMemeWeights>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.05</Neanderthal>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.15</Hussar>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.10</Genie>
+      </xenotypeChances>
+    </xenotypeSet>
     <permanentEnemyToEveryoneExcept>
       <li>OutlanderCivil</li>
       <li>TribeCivil</li>
       <li>PlayerTribe</li>
       <li>PlayerColony</li>
       <li>Ancients</li>
-      <li>Nearmaere_P_Faction</li>
     </permanentEnemyToEveryoneExcept>
     <techLevel>Ultra</techLevel>
     <backstoryFilters>
@@ -59,7 +65,6 @@
         </categories>
       </li>
     </backstoryFilters>
-    <geneticVariance>0.8</geneticVariance>
     <apparelStuffFilter>
       <stuffCategoriesToAllow>
         <li>Metallic</li>
@@ -114,7 +119,7 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
-      <!-- Traders - TODO -->
+      <!-- Traders -->
       <li>
         <kindDef>Trader</kindDef>
         <traders>
@@ -170,6 +175,9 @@
     </pawnGroupMakers>
     <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>70</configurationListOrderPriority>
+    <disallowedRaidAgeRestrictions>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Children</li>
+    </disallowedRaidAgeRestrictions>
   </FactionDef>
 
   <ThingSetMakerDef>
